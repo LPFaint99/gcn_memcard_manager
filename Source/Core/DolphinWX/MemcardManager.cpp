@@ -701,7 +701,7 @@ bool CMemcardManager::ReloadMemcard(const char *fileName, int card)
 		std::string title = memoryCard[card]->GetSaveComment1(fileIndex);
 		std::string comment = memoryCard[card]->GetSaveComment2(fileIndex);
 
-auto const string_decoder = memoryCard[card]->IsAsciiEncoding() ?
+		auto const string_decoder = memoryCard[card]->IsAsciiEncoding() ?
 			CP1252ToUTF8 : SHIFTJISToUTF8;
 
 		wxTitle = StrToWxStr(string_decoder(title));
